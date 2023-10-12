@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TodoList from "./Todolist";
+import "./App.css"
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { ChakraProvider } from '@chakra-ui/react'
 
-function App() {
+function App () {
   return (
+    <>
+    <ChakraProvider>
+    <Navbar/>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <TodoList/>
+
     </div>
-  );
+    <Footer/>
+    </ChakraProvider>
+    </>
+  )
 }
+
 
 export default App;
